@@ -1,0 +1,24 @@
+USE DUMMYDB;
+
+-- 2nd highest salary show koro. sql e protita query onekvabe likha jay. to eta duivabe dekhbo
+
+-- using distinct. distinct remove duplicate data
+SELECT DISTINCT SALARY FROM EMPLOYEES ORDER BY SALARY DESC LIMIT 1 OFFSET 1;
+
+SELECT * FROM EMPLOYEES WHERE SALARY = 
+	(
+		SELECT DISTINCT SALARY FROM EMPLOYEES ORDER BY SALARY DESC LIMIT 1 OFFSET 1
+    );
+    
+-- 2ND METHOD
+SELECT MAX(SALARY) FROM EMPLOYEES WHERE SALARY < (SELECT MAX(SALARY) FROM EMPLOYEES);
+
+SELECT * FROM EMPLOYEES WHERE SALARY = 
+	(
+		SELECT MAX(SALARY) FROM EMPLOYEES WHERE SALARY < (SELECT MAX(SALARY) FROM EMPLOYEES)
+    );
+    
+-- manager er cheye beshi salary pay tader record show koro. eta ektu advanced query, ami eta bujhi nai.
+SELECT * FROM EMPLOYEES AS EMP WHERE SALARY > (
+	SELECT SALARY FROM EMPLOYEES AS MGR WHERE EMP.MANAGER_ID = MGR.EMPLOYEE_ID
+);

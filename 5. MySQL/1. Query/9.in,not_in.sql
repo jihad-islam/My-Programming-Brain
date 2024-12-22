@@ -1,0 +1,32 @@
+/*
+    1. in, not in, like, as ei 4 ta keyword shikhbo
+
+    3. 
+
+*/
+
+USE JIHAD;
+
+CREATE TABLE EMPLOYEE(
+	ID INT PRIMARY KEY,
+    NAME VARCHAR(20),
+    DESIGNATION VARCHAR(50),
+    AGE INT,
+    SALARY VARCHAR(20)
+);
+
+INSERT INTO EMPLOYEE(ID,NAME,DESIGNATION,AGE,SALARY) VALUES 
+(01, 'JIHAD ISLAM', 'JUNIOR SOFTWARE ENGINEER', 20, '20K'),
+(02, 'SADMAN', 'SENIOR SOFTWARE ENGINEER', 30, '50K'),
+(03, 'ASIF', 'PROJECT MANAGER', 40, '60K'),
+(04, 'KIRON', 'TEAM LEADER', 35, '55K'),
+(05, 'MUNNA', 'SENIOR SOFTWARE ENGINEER', 32, '52K');
+
+-- jader id 1,3,5 ami tader name dekhbo. eta WHERE use kore OR diyew kora jay, but IN keyword use kora beshi easy
+SELECT NAME FROM EMPLOYEE WHERE ID = 1 OR ID =3 OR ID = 5;
+SELECT NAME FROM EMPLOYEE WHERE ID IN(1,3,5);
+
+-- ebar jader id 1,3,5 tader name dekhbo na. 
+SELECT NAME FROM EMPLOYEE WHERE ID != 1 AND ID !=3 AND ID != 5;
+SELECT NAME FROM EMPLOYEE WHERE ID NOT IN(1,3,5);
+

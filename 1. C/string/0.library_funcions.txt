@@ -1,0 +1,27 @@
+1. For taking string input:
+        i.   gets
+        ii.  fgets(array_name, string_size, stdin)
+        iii. scanf ("%s", a);
+        iv.  scanf ("%[^\n]s",a); //ekhane s dilew hobe, na dilew hobe.
+
+2. string copy:
+        i.  strcpy(a,b);
+        ii. strncpy(a,b,sizeof(a) );
+
+3. lexicographical: (2 ta string compare, choto, boro naki shoman)
+        i. strcmp(a,b);  a==b hole 0
+                         a>b hole positive
+                         a<b hole negative
+
+4. strlen();
+
+5. Ascii value: '0': 48
+                'A': 65
+                'a': 97
+
+
+
+
+note:
+
+1. fgets() enter ow input ney. to majhe majhe enter input newa off kora lagte pare.

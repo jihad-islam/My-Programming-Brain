@@ -1,0 +1,1 @@
+print("Jihad Islam")

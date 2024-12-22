@@ -1,0 +1,5 @@
+1. STL means Strandard Template Library. eita mainly data structure er Library. 
+
+2. STL er under e vector pore. Array ekta Data Structure. ekhn array er vector gulo dekhbo. Onnanno DS dekhe oigularo STL dekhbo pore.
+3. Dynamic array er STL holo Vector. 
+3. Vector use kore onek hard problem easily solve kora jay.

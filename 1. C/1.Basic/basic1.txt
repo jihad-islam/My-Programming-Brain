@@ -1,0 +1,6 @@
+1. Size:
+    i.   int    -   4 bytes 
+    ii.  float  -   4 bytes (doshoomiker pro 6 or 7 ghor dekhabe)
+    iii. double -   8 bytes (doshoomiker pro 15 ghor porjonto dekhabe)
+    iv.  char   -   1 byte
+    v.   bool   -   1 byte 
