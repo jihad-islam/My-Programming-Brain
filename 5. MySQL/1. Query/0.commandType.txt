@@ -1,0 +1,7 @@
+sql e 5 dhoroner command type ase:
+    1. Data Definition Language (DDL) : Create, Alter, Drop, Truncate
+    2. Data Manipulation Language (DML) : Insert, Update, Delete
+    3. Data Query Language (DQL) : Select
+    4. Data Control Language (DCL) : Grant, Revoke
+    5. Transaction Control Language (TCL) : Commit, Rollback, Savepoint
+
