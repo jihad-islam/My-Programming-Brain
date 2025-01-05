@@ -1,44 +1,38 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int main()
-{
+void mergeArray(vector<int> a1, int m, vector<int> a2, int n) {
+    vector<int> final;
+    int i = 0, j = 0;
 
-   int n, m;
-   cin >> n >> m;
+    while (i < m and j < n) {
+        if (a1[i] < a2[j]) {
+            final.push_back(a1[i]);
+            i++;
+        } else {
+            final.push_back(a2[j]);
+            j++;
+        }
+    }
 
-   int allocation[n][m], max[n][m], available[m];
+    while (i < m) {
+        final.push_back(a1[i]);
+        i++;
+    }
+    while (j < n) {
+        final.push_back(a2[j]);
+        j++;
+    }
 
-   for (int i = 0; i < n; i++)
-   {
-      for (int j = 0; j < m; j++)
-      {
-         cin >> allocation[i][j];
-      }
-   }
+    for (auto x : final) {
+        cout << x << " ";
+    }
+}
 
-   for (int i = 0; i < n; i++)
-   {
-      for (int j = 0; j < m; j++)
-      {
-         cin >> max[i][j];
-      }
-   }
+int main() {
+    vector<int> a1 = {6, 12, 15, 25};
+    vector<int> a2 = {3, 5, 8, 12, 15, 18, 20};
 
-   for (int i = 0; i < m; i++)
-   {
-      cin >> available[i];
-   }
-
-   int need[n][m];
-
-   for (int i = 0; i < n; i++)
-   {
-      for (int j = 0; j < m; j++)
-      {
-         need[i][j] = max[i][j] - allocation[i][j];
-      }
-   }
-
-   return 0;
+    mergeArray(a1, a1.size(), a2, a2.size());
+    return 0;
 }
