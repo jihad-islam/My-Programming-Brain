@@ -19,7 +19,7 @@ CREATE TABLE STUDENT(
 );
 
 -- table delete(drop) kora:
--- DROP TABLE STUDENT;
+DROP TABLE STUDENT;
 
 -- ekhn table e data insert korbo.
 
