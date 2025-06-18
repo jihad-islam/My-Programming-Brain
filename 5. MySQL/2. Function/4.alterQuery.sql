@@ -1,12 +1,10 @@
 /*
     1. update, delete table er data er upor kaj kore. alter, drop kaj kore table er stucture change er jonne. 
 
-    2. add diye column add kora jay. modify diye column er data type change kora jay. drop diye column remove kora jay.
-
-    3. alter table diye ja ja kora jay:
-        - add column: alter table table_name add column_name data_type;
-        - drop column: alter table table_name drop column_name;
-        - modify column: alter table table_name modify column_name data_type;
+    2. alter table diye ja ja kora jay:
+        - add column/attribute: alter table table_name add column_name data_type;
+        - drop column/attribute: alter table table_name drop column_name;
+        - modify column/attribute: alter table table_name modify column_name data_type;
 
 */
 
