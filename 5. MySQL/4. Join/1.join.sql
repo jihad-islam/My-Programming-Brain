@@ -13,9 +13,9 @@
 		WHERE conditions;
 */
 
-USE DUMMYDB;
+USE dummydb;
 
-SELECT * FROM EMPLOYEES;
+SELECT * FROM employees;
 SELECT * FROM DEPARTMENTS;
 
 /*
