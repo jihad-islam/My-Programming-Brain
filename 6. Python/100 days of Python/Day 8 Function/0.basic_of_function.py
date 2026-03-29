@@ -1,9 +1,9 @@
-def greet():
+def greetings():
     print("Hello World!")
     print("I am learning Python")
     print("Python is fun to learn")
 
-greet()
+greetings()
 
 
 '''
@@ -22,10 +22,10 @@ greet("Jihad", "Dhaka") # argument
 '''
 ekhane a = 4, b = 4, c = 6. ami 4,5,6 er position change korle a,b,c er assignment ow change hobe. etai positional argument.
 '''
-def sum(a,b,c):
+def summation(a,b,c):
     print(a+b+c)
 
-sum(4,5,6)
+summation(4,5,6)
 
 '''
 ekhn ami position fixed kore disi. eta keyword argument
