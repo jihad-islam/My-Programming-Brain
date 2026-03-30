@@ -10,7 +10,7 @@ greetings()
 argument is the actual piece of data and parameter is the name of that data
 
 '''
-def greet(name, city): # parameter
+def greet(name, city): # parameter. actually parameter holo variable, jei variable diye amra actual value(argument) dhori.
     print(f"Hello World. I am {name}. I live in {city}.")
     print(f"Now {name} is learning Python")
     print(f"Python is popular in {city} city.")
