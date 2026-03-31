@@ -1,3 +1,124 @@
+/*
+    1. doubly linked list basic concept:
+
+    doubly linked list e protita node er 2 ta pointer thake:
+
+    👉 next → porer node ke point kore  
+    👉 prev → aager node ke point kore  
+
+    👉 tai:
+    samne (forward) + pichone (reverse) duidikei traverse kora jay  
+
+
+    2. traversal:
+
+    - normal traversal → head theke next diye  
+    - reverse traversal → tail theke prev diye  
+
+
+    3. insertion 3 jaygay kora jay:
+
+    a. head e insertion  
+    b. jekono position e insertion  
+    c. tail e insertion  
+
+
+    4. time complexity (TC):
+
+    - head insertion → O(1)  
+    - tail insertion → O(1) (tail track thakle)  
+    - jekono position → O(n)  
+
+
+    5. insertion er main rules (doubly):
+
+    👉 singly er moto 2 ta na, ekhane 4 ta connection update korte hoy
+
+    Step 1: new node create  
+    Step 2: newNode->next set  
+    Step 3: newNode->prev set  
+    Step 4: surrounding node gulor pointer update  
+
+    👉 shortcut (middle insertion):
+
+    newNode->next = temp->next  
+    temp->next = newNode  
+    newNode->next->prev = newNode  
+    newNode->prev = temp  
+
+
+    6. 🔥 MOST IMPORTANT LOGIC:
+
+    👉 temp always thakbe "insert position er aager node e"
+
+    👉 temp->next holo "jeikhane insert hobe oi current node"
+
+
+    7. pointer connection logic (VERY IMPORTANT):
+
+    ধরি:
+    10 ⇄ 20 ⇄ 30 ⇄ 40  
+
+    30 er age insert korbo 100
+
+    👉 temp → 20  
+    👉 temp->next → 30  
+
+    Step:
+
+    1. newNode->next = temp->next   → 100 → 30  
+    2. temp->next = newNode         → 20 → 100  
+    3. newNode->next->prev = newNode → 30 ← 100  
+    4. newNode->prev = temp          → 100 ← 20  
+
+    Final:
+    10 ⇄ 20 ⇄ 100 ⇄ 30 ⇄ 40  
+
+
+    8. ⚠️ common mistake:
+
+    ❌ shob pointer update na korle list break hoye jabe
+
+    👉 MUST update:
+    - next link  
+    - prev link  
+
+    👉 order maintain korte hobe
+
+
+    9. edge cases (VERY IMPORTANT):
+
+    👉 ei function e 2 ta problem ase:
+
+    - position == 0 → head insertion possible na  
+    - position == size → tail insertion possible na  
+
+    👉 karon:
+    - head er prev nai  
+    - tail er next NULL → tar prev access korte gele problem hobe  
+
+
+    10. keno singly te same function diye tail insert kora jeto but doubly te jay na?
+
+    👉 singly te:
+    only next pointer chilo → NULL handle easy
+
+    👉 doubly te:
+    newNode->next = NULL holeo  
+    newNode->next->prev korte gele crash (segmentation fault)
+
+    👉 main reason:
+    NULL er prev access kora jay na ❌  
+
+
+    11. visualization idea:
+
+    👉 insertion mane:
+    "duita node er majhe new node bosano + 4 ta pointer update kora"
+
+    👉 singly te 2 ta link change  
+    👉 doubly te 4 ta link change 🔥
+*/
 #include <bits/stdc++.h>
 using namespace std;
 

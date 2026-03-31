@@ -61,17 +61,16 @@ class Node {
 
 // insertion at any position. tc O(n).
 void insert(Node* head, int position, int value) {
-    // 1. new node create kora holo.
     Node* x = new Node(value);
 
     Node* temp = head;
 
-    // temp(head) ke oi position e point korlam jekhane new node insert korte
-    // chai. position er shoman loop choltese tai tc holo O(n).
-    for (int i = 0; i < position - 1; i++) temp = temp->next;
+    // temp(head) ke oi position e point korlam jekhane new node insert korte chai. position er shoman loop choltese tai tc holo O(n).
+    for (int i = 0; i < position - 1; i++)
+        temp = temp->next;
 
-    x->next = temp->next;  // 2. new node er next e 'new node er porer node er address rekhe dilam.
-    temp->next = x;        // 3. new node er aager node er next e new node er address rekhe dilam.
+    x->next = temp->next;
+    temp->next = x;
 }
 
 // head insert
@@ -83,9 +82,7 @@ void head_insert(Node*& head, int value)  // tc= O(1)
 }
 
 // tail insert. tail ke track rakhar maddhome tail ke insert kora  hoice. aager bar onno vabe insert kora hoyechilo.
-void tail_insert(
-    Node*& head, Node*& tail,
-    int value)  // jehetu vitore kono loop choltese na. tai tc =O(1).
+void tail_insert(Node*& head, Node*& tail, int value)  // jehetu vitore kono loop choltese na. tai tc =O(1).
 {
     Node* x = new Node(value);
 
@@ -131,8 +128,7 @@ int main() {
     Node* b = new Node(30);
     Node* c = new Node(40);
     Node* d = new Node(50);
-    Node* tail = d;  // last node tai tail. tai tail e 'd' node ke rekhe dilam.
-                     // eta holo tail ke track rakha.
+    Node* tail = d;  // last node tai tail. tai tail e 'd' node ke rekhe dilam.  eta holo tail ke track rakha.
 
     head->next = a;
     a->next = b;
@@ -147,9 +143,8 @@ int main() {
     cin >> position >> value;
 
     if (position >
-        size(head))  // eta error handle er jonne use korlam. linked list er
-                     // size holo 5. but ami 15 no index e value insert korte
-                     // chai tokhon invalid show korbe.
+        size(head))  // eta error handle er jonne use korlam. linked list er size holo 5. but ami 15 no index e value insert korte chai tokhon invalid show korbe.
+
         cout << "Invalid Position" << endl;
 
     else if (position == 0)
