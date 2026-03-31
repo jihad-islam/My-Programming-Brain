@@ -24,11 +24,14 @@ int main() {
     b->next = c;
     c->next = d;
 
-    cout << head->value << endl;                          // 10
-    cout << head->next->value << endl;                    // 20
-    cout << head->next->next->value << endl;              // 30
-    cout << head->next->next->next->value << endl;        // 40
-    cout << head->next->next->next->next->value << endl;  // 50
+    Node* temp = head; // ekhon head er address temp e ase. amra temp move korabo barbar.
+
+    while (temp != NULL) {
+        cout << temp->value << endl;
+        temp = temp->next;
+    }
+
+    cout << endl;
 
     return 0;
 }

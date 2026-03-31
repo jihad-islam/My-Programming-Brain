@@ -22,23 +22,6 @@ int main()
     Node *c = new Node(40);
     Node *d = new Node(50);
 
-    // (*head).next = a;
-    // (*a).next = b;
-    // (*b).next = c;
-    // (*c).next = d;
-
-    // cout << (*head).value << endl;
-    // cout << (*(*head).next).value << endl;
-    // cout << (*(*(*head).next).next).value << endl;
-    // cout << (*(*(*(*head).next).next).next).value << endl;
-    // cout << (*(*(*(*(*head).next).next).next).next).value << endl;
-
-    // cout << head->value << endl;
-    // cout << head->next->value << endl;
-    // cout << head->next->next->value << endl;
-    // cout << head->next->next->next->value << endl;
-    // cout << head->next->next->next->next->value << endl;
-
     head->next = a;
     a->next = b;
     b->next = c;
@@ -47,7 +30,7 @@ int main()
     while (head != NULL) // evabe loop chalanor problem hocche head ta null e chole jabe. pore head niye kaj korte chaile null show korbe. tai kokhonoi head ke move korano jabe na. head er address notun arekta pointer e rakhe oi pointer niye kaj kori.
     {
         cout << head->value << endl;
-        head = head->next;
+        head = head->next; // ekhane barbar head ke update kore next node ke head banano hocche. but head ke move korano jabe na. so head always head er motoi thakbe. amra head er address ke temp e rekhe then temp ke move koraya jekono node er value pabo.
     }
 
     while (head != NULL) // ekhn ami abaro head print korbo. but kichui print hobe na. karon head null e point kore ase.
