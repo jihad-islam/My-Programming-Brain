@@ -43,20 +43,24 @@ mysql:
 */
 
 CREATE TABLE student (
-    roll CHAR(4) PRIMARY KEY,
-    name VARCHAR(50) NOT NULL,
-    email VARCHAR(60) UNIQUE,
-    address VARCHAR(255),
-    age INT CHECK (age >= 18)
-);
+        roll CHAR(4),
+        name VARCHAR(50) NOT NULL,  -- Inline constraint (NOT NULL)
+        email VARCHAR(60),
+        address VARCHAR(255),
+        age INT,
+    
+        CONSTRAINT pk_roll PRIMARY KEY(roll),
+        CONSTRAINT uq_email UNIQUE(email),
+        CONSTRAINT chk_age CHECK(age >= 18)
+    );
 
 CREATE TABLE library (
-    book_id SERIAL PRIMARY KEY,
+    book_id SERIAL,
     bookname VARCHAR(50),
     whohired_roll CHAR(4),
 
-    FOREIGN KEY (whohired_roll)
-    REFERENCES student(roll)
+    CONSTRAINT lib_id PRIMARY KEY(book_id),
+    CONSTRAINT fk_student FOREIGN KEY(whohired_roll) REFERENCES student(roll)
 );
 
 /*
@@ -70,12 +74,22 @@ django orm:
         address = models.CharField(max_length=255, null=True, blank=True)
         age = models.IntegerField()
 
+    # eta bojhar jonne. but eta parfect way na.
     class Library(models.Model):
         book_id = models.AutoField(primary_key=True)
         bookname = models.CharField(max_length=50)
 
-        whohired = models.ForeignKey(
+        whohired_roll = models.ForeignKey(
             Student,
             on_delete=models.CASCADE
         )
+    
+    # eta perfect way. jekhane foreign key er nam student. 
+    class Library(models.Model):
+    book_id = models.AutoField(primary_key=True)
+    bookname = models.CharField(max_length=50)
+
+    # যেহেতু এটা একটা Student Object-কে পয়েন্ট করছে, 
+    # তাই আমরা নাম দিলাম 'student' (বা 'whohired_student')
+    student = models.ForeignKey(Student, on_delete=models.CASCADE)
 */

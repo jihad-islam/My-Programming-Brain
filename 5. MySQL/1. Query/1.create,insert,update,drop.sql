@@ -1,7 +1,6 @@
 /*
-    *** Services -> MySQL80 -> Start ***
-    
-    CHAR vs VARCHAR 
+   1. Database e column ke key bola hoy. jemon roll, name, marks etc.
+   2. Database e row ke record bola hoy. jemon roll 5796, name JIHAD, marks 95 etc. 
     
 */
 
