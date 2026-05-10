@@ -56,7 +56,7 @@
 outer loop:
     for (int i = 0; i < n - 1; i++)
     👉 koyta iteration cholbe seta control kore
-    👉 maximum n-1 iteration lage
+    👉 n element er array te maximum n-1 iteration lage(eta mukhosto, note khatay likha ase). tai loop n-1 er kom porjonto chalano hoise.
 
 inner loop:
     for (int j = 0; j < n - 1 - i; j++)
@@ -75,7 +75,7 @@ inner loop:
     👉 jodi kono swap hoy: swapped = true
     👉 iteration sheshe jodi swapped false thake, mane array already sorted
     👉 tokhon early break kora hoy
-
+    - bishoy ta bujsto to? prothom iteration e kono swap na hole thats mean array already kintu sorted. so 2nd itaration er r loop na chalaya ber hoye jabo.
 
 7. optimized version er advantage:
     example:
@@ -131,9 +131,7 @@ void basicBubbleSort(vector<int>& arr, int n) {
     }
 }
 
-// OPTIMIZED BUBBLE SORT FUNCTION
 void optimizedBubbleSort(vector<int>& arr, int n) {
-    // TC: Best O(n), Average/Worst O(n²), SC: O(1)
     for (int i = 0; i < n - 1; i++) {
         bool swapped = false;
 
