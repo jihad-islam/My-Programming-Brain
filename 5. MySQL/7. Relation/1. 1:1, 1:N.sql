@@ -7,9 +7,29 @@
 
 -- Real-life Example:
 -- One PERSON has one PASSPORT
+/*
+ascii table for 1:1 relationships:
+
+    person table:
+    -------------------+------------------+
+    |ID (PK)          | NAME              |
+    -------------------+------------------+
+    | 1                | John Doe         |
+    -------------------+------------------+
+
+    passport table:
+    -------------------+------------------+-----------------+
+    |ID (PK)          | PERSON_ID (FK)   | PASSPORT_NO      |
+    -------------------+------------------+-----------------+
+    | 1                | 1                | A1234567        |
+    -------------------+------------------+-----------------+
+
+*/
+
+
+
 
 -- ✅ SQL Example:
-
 CREATE TABLE PERSON (
     ID INT PRIMARY KEY,
     NAME VARCHAR(50)
@@ -37,8 +57,30 @@ CREATE TABLE PASSPORT (
 -- Real-life Example:
 -- One STUDENT can borrow many BOOKS from a LIBRARY
 
--- ✅ SQL Example:
+/*
+ascii table for 1:N relationships:
 
+    student table:
+    -------------------+------------------+
+    |ROLL (PK)        | NAME              |
+    -------------------+------------------+
+    | 001              | John Doe         |
+    | 002              | Jane Smith       |
+    -------------------+------------------+
+
+    library table:
+    -------------------+------------------+-----------------+
+    |BOOK_ID (PK)     | BOOKNAME         | WHOHIRED_ROLL (FK)|
+    -------------------+------------------+-----------------+
+    | 1                | The Great Gatsby | 001             |
+    | 2                | To Kill a Mock   | 001             |
+    | 3                | 1984             | 002             |
+    -------------------+------------------+-----------------+
+
+*/
+
+
+-- ✅ SQL Example:
 CREATE TABLE STUDENT (
     ROLL CHAR(4) PRIMARY KEY,
     NAME VARCHAR(50)
