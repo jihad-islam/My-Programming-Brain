@@ -2,6 +2,7 @@
 1. bubble sort concept (fe exam er note khatay details ase): bubble sort ekta comparison-based sorting algorithm.
     👉 pasapasi 2 ta element compare kora hoy, emon na je prothom element ke fixed dhore array er baki shob element chekc kora hoy. eta kora hoy selection sort e.
     👉 left element boro hole swap kora hoy, boro na hole swap kora hoy na.
+    👉 animation link: https://www.youtube.com/watch?v=9I2oOAr2okY
 
 
 2. keno "bubble" sort bola hoy?
