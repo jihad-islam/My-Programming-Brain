@@ -1,7 +1,7 @@
 /*
 1. bubble sort concept (fe exam er note khatay details ase): bubble sort ekta comparison-based sorting algorithm.
     👉 pasapasi 2 ta element compare kora hoy, emon na je prothom element ke fixed dhore array er baki shob element chekc kora hoy. eta kora hoy selection sort e.
-    👉 left element boro hole swap kora hoy, boro na hole swap kora hoy na.
+    👉 left element boro hole swap kora hoy, boro na hole swap kora hoy na. evabe shobcheye boro element ta last e chole jay.
     👉 animation link: https://www.youtube.com/watch?v=9I2oOAr2okY
 
 
@@ -63,6 +63,7 @@ inner loop:
     for (int j = 0; j < n - 1 - i; j++)
     👉 adjacent element compare kore
     👉 n-1-i use kora hoy karon: protita iteration er por last er element sorted hoye jay tai abar oi part e jawa lage na
+    👉 n-1-i er explanation: 1st iteration e shobcheye boro element ta last e chole jay. 2nd iteration e 2nd largest element sorted hoye jay. so 2 number iteration e last 2 ta element check korar proyojon nai. so jei koyta iteration oi koyta last er diker element check korar dorkar nai. and iteration number bujhbo i er value diye. tai n-1-i kora hoy.
 
 
 5. swap condition:
@@ -76,7 +77,7 @@ inner loop:
     👉 jodi kono swap hoy: swapped = true
     👉 iteration sheshe jodi swapped false thake, mane array already sorted
     👉 tokhon early break kora hoy
-    - bishoy ta bujsto to? prothom iteration e kono swap na hole thats mean array already kintu sorted. so 2nd itaration er r loop na chalaya ber hoye jabo.
+    - bishoy ta bujsto to? prothom iteration e kono swap na hole that means array already kintu sorted. so 2nd itaration er r loop na chalaya ber hoye jabo.
 
 7. optimized version er advantage:
     example:
@@ -122,7 +123,7 @@ table:
 #include <bits/stdc++.h>
 using namespace std;
 
-void basicBubbleSort(vector<int>& arr, int n) {
+void basicBubbleSort(int arr[], int n) {
     for (int i = 0; i < n - 1; i++) {          // itaration loop
         for (int j = 0; j < n - 1 - i; j++) {  // adjacent element compare loop
             if (arr[j] > arr[j + 1]) {
@@ -132,9 +133,9 @@ void basicBubbleSort(vector<int>& arr, int n) {
     }
 }
 
-void optimizedBubbleSort(vector<int>& arr, int n) {
+void optimizedBubbleSort(int arr[], int n) {
     for (int i = 0; i < n - 1; i++) {
-        bool swapped = false;
+        bool swapped = false;  // swap variable ta outer loop er moddhei likha lagbe. karon protibar iteration er shurute swap variable false thakbe. jodi swap hoy taile taile swap variable tru hobe and break hobe na. next iteration abar false diye shuru hobe. and swap na hole false ei thakbe and break hoye jabe.
 
         for (int j = 0; j < n - 1 - i; j++) {
             if (arr[j] > arr[j + 1]) {
@@ -158,31 +159,13 @@ int main() {
 
     cout << "Enter array elements with spaces: ";
 
-    vector<int> arr1(n);
-    for (int i = 0; i < n; i++) {
-        cin >> arr1[i];
-    }
+    int arr[n];
+    for (int i = 0; i < n; i++) cin >> arr[i];
 
-    // bubble sort er both function will change the original array. tai copy kore nilam. arr1 is for basic bubble sort and arr2 is for optimized bubble sort.
-    vector<int> arr2 = arr1;
+    // basicBubbleSort(arr, n);
+    optimizedBubbleSort(arr, n);
 
-    // BASIC BUBBLE SORT
-    basicBubbleSort(arr1, n);
-
-    cout << "Sorted array (Basic): ";
-    for (int i = 0; i < n; i++) {
-        cout << arr1[i] << " ";
-    }
-    cout << endl;
-
-    // OPTIMIZED BUBBLE SORT
-    optimizedBubbleSort(arr2, n);
-
-    cout << "Sorted array (Optimized): ";
-    for (int i = 0; i < n; i++) {
-        cout << arr2[i] << " ";
-    }
-    cout << endl;
+    for (int i = 0; i < n; i++) cout << arr[i] << " ";
 
     return 0;
 }
