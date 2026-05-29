@@ -94,17 +94,21 @@ void selectionSort(vector<int>& arr) {
 
     for (int i = 0; i < n; i++)  // outer loop to iterate all the numbers
     {
-        int min = i;
+        int minIndex = i;
 
         for (int j = i + 1; j < n; j++)  // inner loop to find the minimum index
         {
-            if (arr[j] < arr[min]) {
-                min = j;
+            if (arr[j] < arr[minIndex]) {
+                minIndex = j;
             }
         }
 
         // swap two numbers
-        swap(arr[i], arr[min]);
+        // swap(arr[i], arr[min]);
+        
+        int temp = arr[i];
+        arr[i] = arr[minIndex];
+        arr[minIndex] = temp;
     }
 }
 
