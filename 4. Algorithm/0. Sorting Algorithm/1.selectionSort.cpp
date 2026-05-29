@@ -1,7 +1,7 @@
 /*
 1. selection sort concept (fe exam er note khatay details ase): selection sort ekta comparison-based sorting algorithm.
     👉 prothom index er element ke minimum(fixed) dhore full array iterate kora hoy and array er lowest value er sathe swap kora hoy.
-    👉 ekhane element ke actually minimum dhora hoy na. index ke minimum dhora hoy. 
+    👉 ekhane element ke actually minimum dhora hoy na. index ke minimum dhora hoy.
     👉 prothom index(not value) ke minimum dhora hoy( int min = i; ). then full array er index iterate kora hoy(using inner loop: j). but comparison kora hoy index er value kei ( arr[j] < arr[min] ). then condition manle min update kora hoy index diye ( min = j; ). then outer loop e oi index er value swap kora hoy ( swap(arr[i], arr[min]); ).
     👉 animation link: https://www.youtube.com/watch?v=MxEooU-8ps8
 
@@ -85,28 +85,25 @@ table:
 
 */
 
-
 #include <bits/stdc++.h>
 using namespace std;
 
 void selectionSort(vector<int>& arr) {
     int n = arr.size();
 
-    for (int i = 0; i < n; i++)  // outer loop to iterate all the numbers
-    {
+    for (int i = 0; i < n - 1; i++) {  // outer loop to iterate all the numbers
         int minIndex = i;
 
-        for (int j = i + 1; j < n; j++)  // inner loop to find the minimum index
-        {
+        for (int j = i + 1; j < n; j++) {  // inner loop to find the minimum index
             if (arr[j] < arr[minIndex]) {
                 minIndex = j;
             }
         }
 
         // swap two numbers
-        // swap(arr[i], arr[min]);
-        
-        int temp = arr[i];
+        // swap(arr[i], arr[minIndex]);
+
+        int temp = arr[i];  // temp er moddhe jei duita swap korbo tar jekono ekta rakhlei hobe and oi hishebei logic likhbo.
         arr[i] = arr[minIndex];
         arr[minIndex] = temp;
     }
@@ -127,6 +124,10 @@ int main() {
     selectionSort(arr);
 
     // print the sorted array
+    // for (int i = 0; i < arr.size(); i++) {
+    //     cout << arr[i] << " ";
+    // }
+
     for (int x : arr) {
         cout << x << " ";
     }
