@@ -91,10 +91,10 @@ using namespace std;
 void selectionSort(vector<int>& arr) {
     int n = arr.size();
 
-    for (int i = 0; i < n - 1; i++) {  // outer loop to iterate all the numbers
+    for (int i = 0; i < n - 1; i++) {  // sort er shomoy last element e emnitei boro value ta boshe jay tai outer loop n-1 er aag porjonto loop cholbe.
         int minIndex = i;
 
-        for (int j = i + 1; j < n; j++) {  // inner loop to find the minimum index
+        for (int j = i + 1; j < n; j++) {  // inner loop kintu n porjonto cholbe.
             if (arr[j] < arr[minIndex]) {
                 minIndex = j;
             }

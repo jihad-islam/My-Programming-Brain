@@ -1,3 +1,16 @@
+/*
+    👉selection sort: first element ke choto dhorbe then full array ghure shobcheye choto element khuje ber korbe and swap korbe. 1 ta iteration e 1 bari swap hoy.
+    
+    👉bubble sort: 1 ta iteration e pashapashi 2 ta element er comparison hoy and largest element ta last index e boshe jay. ekhane continuos swap hote thake inner loop e. 1 ta iteration 1 ta element ei last e boshbe.
+
+    👉insertion sort: tash(card) er sort
+
+        - selection sort e first element ke choto dhore array er shobcheye choto element ke select kore swap
+        - bubble sort e barbar swap hoy
+        - insertion sort: tash
+
+    note: selection and bubble sort e first itaration ei boro element ta last index e boshe jay. tai ei 2 tar full array ghora lage na. tai inner loop n-1 er aag porjonto ghure. but insertion sort e n er aag porjto ghure.
+*/
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -27,7 +40,6 @@ void bubbleSort(vector<int>& arr) {
 
         for (int j = 0; j < n - 1 - i; j++) {
             if (arr[j] > arr[j + 1]) {
-                // swap(arr[j], arr[j + 1]);
                 int temp = arr[j];
                 arr[j] = arr[j + 1];
                 arr[j + 1] = temp;

@@ -1,3 +1,7 @@
+/*
+    vector diyew queue implement kora jay as like stack but vector diye queue implement korle tc onek bere jay. tai queue e kokhono vector use kora hoy na.
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 

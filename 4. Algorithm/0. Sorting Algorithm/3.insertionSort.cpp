@@ -53,17 +53,17 @@ using namespace std;
 void insertionSort(vector<int>& arr) {
     int n = arr.size();
 
-    for (int i = 1; i < n; i++) {  // i =1 theke start hobe karon first element already sorted
-        int key = arr[i];
+    for (int i = 1; i < n; i++) {  // array index kintu 0 thekei start hoise but i=1 theke start hobe karon first element already sorted
+        int key = arr[i];          // key holo unsorted part er first(left most) element. ei key diyei sorted part er sokol element while loop use kore comparison hobe.
 
-        int j = i - 1;
-
-        while (j >= 0 && arr[j] > key) {  // shift larger elements
+        int j = i - 1;  // j holo sorted part er last(right most) element.
+        while (j >= 0 && arr[j] > key) {
             arr[j + 1] = arr[j];
             j--;
         }
 
-        arr[j + 1] = key;  // insert key in correct position
+        // ekhane key insertion er index arr[j] na hoye arr[j+1] holo keno? karon while loop theke ber howar shomoy j-- hoye gese tai j kintu i-1 na, aro choto index.
+        arr[j + 1] = key;
     }
 }
 
