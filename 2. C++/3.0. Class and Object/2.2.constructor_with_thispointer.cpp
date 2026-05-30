@@ -1,25 +1,23 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-class Student
-{
-public:
+class Student {
+   public:
     int roll;
     int cls;
     double gpa;
 
     // class and constructor er nam same hobe
-    Student(int roll, int cls, double gpa) // jodi constructor and class er variable same nei tahole (*this). pointer use korte hobe.
+    Student(int roll, int cls, double gpa)  // jodi constructor and class er variable same nei tahole (*this). pointer use korte hobe.
     {
-        this->roll = roll; // this pointer arrow diye use kora preferable. just this likhe dot diye variable likhle vs code e automatically arrow eshe jabe. dot diye acces kore and arrow diye dereference kore. arrow amra aaro onek jaygay use korbo. jekhanei arrow use korbo, shekhanei pointer bujhabe.
+        this->roll = roll;  // this pointer arrow diye use kora preferable. just this likhe dot diye variable likhle vs code e automatically arrow eshe jabe. dot diye acces kore and arrow diye dereference kore. arrow amra aaro onek jaygay use korbo. jekhanei arrow use korbo, shekhanei pointer bujhabe.
         this->cls = cls;
         this->gpa = gpa;
     }
 };
 
-int main()
-{
-    Student rahim(29, 45, 5.00); // constructor use kore value assign kora.
+int main() {
+    Student rahim(29, 10, 5.00);  // constructor use kore value assign kora.
     Student karim(10, 5, 4.33);
 
     cout << rahim.roll << " " << rahim.cls << " " << rahim.gpa << endl;

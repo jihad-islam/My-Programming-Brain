@@ -19,7 +19,7 @@
         - advantage: Dynamic size — runtime এ grow করে। Fixed size লাগে না। Memory efficient।
         - disadvantage: Pointer manage করতে হয়। Array এর চেয়ে একটু জটিল। Extra pointer per node।
 
-    c. stl: best for cp and project.
+    c. stl: project, cp and real life e stl use kora hoy.
 
 note:
     - doubly diye stack and queue implement kora hoy na. doubly te memory waste hoy. Dequeue te doubly use kora hoy.
