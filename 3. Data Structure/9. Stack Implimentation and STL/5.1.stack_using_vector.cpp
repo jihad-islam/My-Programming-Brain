@@ -2,18 +2,27 @@
 using namespace std;
 
 class myStack {
-   public:
-    vector<int> v;
+   private:
+    vector<int> v;  // Data private রাখা ভালো প্র্যাকটিস
 
+   public:
     void push(int val) {
         v.push_back(val);
     }
 
     void pop() {
+        if (v.empty()) {
+            cout << "Stack is empty." << endl;
+            return;
+        }
         v.pop_back();
     }
 
     int top() {
+        if (v.empty()) {
+            cout << "Stack is Empty" << endl;
+            return -1;
+        }
         return v.back();
     }
 
@@ -22,6 +31,8 @@ class myStack {
     }
 
     bool empty() {
+        // return v.empty();
+
         if (v.size() == 0)
             return true;
         else
@@ -42,9 +53,7 @@ int main() {
         st.push(x);
     }
 
-    // while (st.empty() == false)
-    while (!st.empty())  // jotokhon na empty hobe loop cholte thakbe.
-    {
+    while (!st.empty()) {
         cout << st.top() << endl;
         st.pop();
     }

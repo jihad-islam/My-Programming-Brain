@@ -1,13 +1,3 @@
-/*
-    1. stack notun kono data structure na. eta just koykta function er somosti or operation. so vector diye implementation korte chaile just vector declare kore vector e oi function gulo like push, pop, etc implementation korlei stack hoye jabe.
-
-    2. Stack means LIFO.
-
-    3. Stack আলাদা কোনো concrete data structure না, এটা একটা abstract data structure (concept) যা LIFO (Last In First Out) principle follow করে। Stack সাধারণত array, vector বা list (Python) দিয়ে implement করা হয়। এর main operations হলো push (add), pop (remove) এবং top (last element দেখা)। সংক্ষেপে, stack define করে data কিভাবে behave করবে, আর array/vector/list define করে data কিভাবে memory তে store হবে।
-
-    note: stack and queue onek vabei implement kora jay. but shobcheye easy holo vector diye kora. linked list diyew kaje lage majhe majhe. but exam e details e code korte hobe. so shurute vector diye concept clear korbo. then details er jonne array er ta shikhbo. and jodi kokhon kaje lage doubly diye dekhbo. and stack and queue er alada stl ase. cp korar shomoy ei stl use korle somossa nai. but job interview te direct stack and queue er stl use na korai valo. so shurute vector then array for concept.
-*/
-
 #include <bits/stdc++.h>
 using namespace std;
 
