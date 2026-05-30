@@ -67,7 +67,6 @@ class Queue {
     }
 
     // size operation
-    // Queue এ কয়টা element আছে return করবে
     int size() {
         if (empty()) {
             return 0;
