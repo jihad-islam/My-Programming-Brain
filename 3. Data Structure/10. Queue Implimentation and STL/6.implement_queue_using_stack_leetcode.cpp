@@ -1,5 +1,8 @@
 /*
     1. stack use kore queue implement kora lagbe.
+    2. Ei code STL er stack use kore kora hoyeche.
+    3. Concept: stack holo LIFO, but queue holo FIFO. Tai temporary stack use kore
+       front/head element ber kora hocche.
 */
 
 class MyQueue
