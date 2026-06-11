@@ -50,7 +50,7 @@ SET NAME = 'JIHAD ISLAM' WHERE ROLL = 5796;
     on:  SET SQL_SAFE_UPDATES=1;
 */
 
--- ekhn delete kora dekhbo:
+-- ekhn delete kora dekhbo. full row delete hobe:
 DELETE FROM STUDENT
 WHERE ROLL = 5325;
 
