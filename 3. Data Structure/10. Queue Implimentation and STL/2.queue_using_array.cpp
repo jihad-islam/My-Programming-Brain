@@ -1,8 +1,8 @@
 /*
     1. stack e just topIndex(stack er topIndex and queue er rearIndex same) variable newa hoy. but queue te frontIndex and rearIndex duita variable newa hoy keno?
-       
+
         - stack e array er last position ei value insert kora hoy and last position thekei value remove kora hoy. tai just last position ta track rakhlei hoy.
-  
+
         - but queue te value insert hoy last index e and remove hoy first index theke. tai first and last duita position track rakhte hoy.
 */
 #include <bits/stdc++.h>
@@ -41,7 +41,7 @@ class Queue {
 
     // dequeue operation: array first index er element remove
     void dequeue() {
-        if (empty()) {
+        if (frontIndex == -1) {
             cout << "Queue Underflow! Queue empty." << endl;
             return;
         }
@@ -55,10 +55,9 @@ class Queue {
         }
     }
 
-    // front operation
-    // Queue এর front element return করবে
+    // front operation: Queue এর front element(array er first index element) return করবে
     int front() {
-        if (empty()) {
+        if (frontIndex == -1) {
             cout << "Queue is Empty." << endl;
             return -1;
         }
@@ -68,7 +67,7 @@ class Queue {
 
     // size operation
     int size() {
-        if (empty()) {
+        if (frontIndex == -1) {
             return 0;
         }
 
